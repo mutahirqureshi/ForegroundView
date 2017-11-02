@@ -15,7 +15,7 @@
  *
  */
 
-package com.anttek.foreground.widget;
+package com.mutahirqureshi.foreground.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -24,37 +24,39 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.widget.GridView;
+import android.widget.ScrollView;
 
 /**
  * Created by Bao Le on 9/26/2015.
  * Add foreground to base view
  */
-public class ForegroundGridView extends GridView {
+public class ForegroundScrollView extends ScrollView {
 
     private final ForegroundViewImpl mImpl = new ForegroundViewImpl(this);
 
-    public ForegroundGridView(Context context) {
+    public ForegroundScrollView(Context context) {
         this(context, null);
     }
 
-    public ForegroundGridView(Context context, AttributeSet attrs) {
+    public ForegroundScrollView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public ForegroundGridView(Context context, AttributeSet attrs, int defStyle) {
+
+    public ForegroundScrollView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init(context, attrs, defStyle);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public ForegroundGridView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public ForegroundScrollView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(context, attrs, defStyleAttr);
     }
 
     private void init(Context context, AttributeSet attrs, int defStyle) {
         mImpl.init(context, attrs, defStyle);
+
     }
 
     /**
@@ -84,7 +86,7 @@ public class ForegroundGridView extends GridView {
     }
 
     @Override
-    public boolean verifyDrawable(Drawable who) {
+    protected boolean verifyDrawable(Drawable who) {
         return super.verifyDrawable(who) || (mImpl != null && mImpl.verifyDrawable(who));
     }
 

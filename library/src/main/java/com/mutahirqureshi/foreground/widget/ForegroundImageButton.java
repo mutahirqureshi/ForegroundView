@@ -15,7 +15,7 @@
  *
  */
 
-package com.anttek.foreground.widget;
+package com.mutahirqureshi.foreground.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -24,31 +24,32 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.widget.LinearLayout;
+import android.widget.ImageButton;
 
 /**
  * Created by Bao Le on 9/26/2015.
  * Add foreground to base view
  */
-public class ForegroundLinearLayout extends LinearLayout {
+public class ForegroundImageButton extends ImageButton {
 
     private final ForegroundViewImpl mImpl = new ForegroundViewImpl(this);
 
-    public ForegroundLinearLayout(Context context) {
+    public ForegroundImageButton(Context context) {
         this(context, null);
     }
 
-    public ForegroundLinearLayout(Context context, AttributeSet attrs) {
+    public ForegroundImageButton(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public ForegroundLinearLayout(Context context, AttributeSet attrs, int defStyle) {
+
+    public ForegroundImageButton(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init(context, attrs, defStyle);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public ForegroundLinearLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public ForegroundImageButton(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(context, attrs, defStyleAttr);
     }
@@ -57,7 +58,6 @@ public class ForegroundLinearLayout extends LinearLayout {
         mImpl.init(context, attrs, defStyle);
 
     }
-
 
     /**
      * Describes how the foreground is positioned.

@@ -15,7 +15,7 @@
  *
  */
 
-package com.anttek.foreground.widget;
+package com.mutahirqureshi.foreground.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -24,33 +24,31 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.widget.ListView;
+import android.widget.LinearLayout;
 
 /**
  * Created by Bao Le on 9/26/2015.
  * Add foreground to base view
  */
-public class ForegroundListView extends ListView {
+public class ForegroundLinearLayout extends LinearLayout {
 
     private final ForegroundViewImpl mImpl = new ForegroundViewImpl(this);
 
-    public ForegroundListView(Context context) {
+    public ForegroundLinearLayout(Context context) {
         this(context, null);
     }
 
-    public ForegroundListView(Context context, AttributeSet attrs) {
+    public ForegroundLinearLayout(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-
-
-    public ForegroundListView(Context context, AttributeSet attrs, int defStyle) {
+    public ForegroundLinearLayout(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init(context, attrs, defStyle);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public ForegroundListView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public ForegroundLinearLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(context, attrs, defStyleAttr);
     }
@@ -88,7 +86,7 @@ public class ForegroundListView extends ListView {
     }
 
     @Override
-    public boolean verifyDrawable(Drawable who) {
+    protected boolean verifyDrawable(Drawable who) {
         return super.verifyDrawable(who) || (mImpl != null && mImpl.verifyDrawable(who));
     }
 

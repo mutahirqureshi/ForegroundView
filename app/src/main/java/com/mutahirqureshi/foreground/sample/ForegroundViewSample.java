@@ -15,7 +15,7 @@
  *
  */
 
-package com.anttek.foreground.sample;
+package com.mutahirqureshi.foreground.sample;
 
 import android.app.Activity;
 import android.os.Bundle;

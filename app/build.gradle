@@ -2,10 +2,10 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion BUILD_TOOLS_VERSION
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
-        applicationId "com.anttek.foreground.sample"
+        applicationId "com.mutahirqureshi.foreground.sample"
         minSdkVersion 14
         targetSdkVersion 26
         versionCode 1
@@ -18,12 +18,7 @@ android {
         }
     }
 }
-repositories {
-    maven {
-        url 'https://dl.bintray.com/baole/maven'
-    }
-}
+
 dependencies {
-    compile 'com.anttek.foreground.widget:library:1.0.2@aar'
-//    compile project(':library')
+    compile project(':library')
 }

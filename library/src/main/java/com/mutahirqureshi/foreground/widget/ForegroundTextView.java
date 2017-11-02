@@ -15,7 +15,7 @@
  *
  */
 
-package com.anttek.foreground.widget;
+package com.mutahirqureshi.foreground.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -24,32 +24,32 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.widget.ImageButton;
+import android.widget.TextView;
 
 /**
  * Created by Bao Le on 9/26/2015.
  * Add foreground to base view
  */
-public class ForegroundImageButton extends ImageButton {
+public class ForegroundTextView extends TextView {
 
     private final ForegroundViewImpl mImpl = new ForegroundViewImpl(this);
 
-    public ForegroundImageButton(Context context) {
+    public ForegroundTextView(Context context) {
         this(context, null);
     }
 
-    public ForegroundImageButton(Context context, AttributeSet attrs) {
+    public ForegroundTextView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
 
-    public ForegroundImageButton(Context context, AttributeSet attrs, int defStyle) {
+    public ForegroundTextView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init(context, attrs, defStyle);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public ForegroundImageButton(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public ForegroundTextView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(context, attrs, defStyleAttr);
     }

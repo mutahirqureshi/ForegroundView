@@ -15,7 +15,7 @@
  *
  */
 
-package com.anttek.foreground.widget;
+package com.mutahirqureshi.foreground.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -24,32 +24,33 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.widget.ScrollView;
+import android.widget.ListView;
 
 /**
  * Created by Bao Le on 9/26/2015.
  * Add foreground to base view
  */
-public class ForegroundScrollView extends ScrollView {
+public class ForegroundListView extends ListView {
 
     private final ForegroundViewImpl mImpl = new ForegroundViewImpl(this);
 
-    public ForegroundScrollView(Context context) {
+    public ForegroundListView(Context context) {
         this(context, null);
     }
 
-    public ForegroundScrollView(Context context, AttributeSet attrs) {
+    public ForegroundListView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
 
-    public ForegroundScrollView(Context context, AttributeSet attrs, int defStyle) {
+
+    public ForegroundListView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init(context, attrs, defStyle);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public ForegroundScrollView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public ForegroundListView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(context, attrs, defStyleAttr);
     }
@@ -58,6 +59,7 @@ public class ForegroundScrollView extends ScrollView {
         mImpl.init(context, attrs, defStyle);
 
     }
+
 
     /**
      * Describes how the foreground is positioned.
@@ -86,7 +88,7 @@ public class ForegroundScrollView extends ScrollView {
     }
 
     @Override
-    protected boolean verifyDrawable(Drawable who) {
+    public boolean verifyDrawable(Drawable who) {
         return super.verifyDrawable(who) || (mImpl != null && mImpl.verifyDrawable(who));
     }
 

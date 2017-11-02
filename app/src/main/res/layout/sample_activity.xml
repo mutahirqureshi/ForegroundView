@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.anttek.foreground.widget.ForegroundLinearLayout
+        <com.mutahirqureshi.foreground.widget.ForegroundLinearLayout
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:foreground="@drawable/foreground">
@@ -33,10 +33,10 @@
                 android:textSize="20sp"
                 android:layout_height="wrap_content"
                 android:text="This is ForegroundLinearLayout" />
-        </com.anttek.foreground.widget.ForegroundLinearLayout>
+        </com.mutahirqureshi.foreground.widget.ForegroundLinearLayout>
 
 
-        <com.anttek.foreground.widget.ForegroundRelativeLayout
+        <com.mutahirqureshi.foreground.widget.ForegroundRelativeLayout
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:foreground="@drawable/foreground">
@@ -48,7 +48,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
                 android:text="This is ForegroundRelativeLayout" />
-        </com.anttek.foreground.widget.ForegroundRelativeLayout>
+        </com.mutahirqureshi.foreground.widget.ForegroundRelativeLayout>
 
     </LinearLayout>
 </ScrollView>

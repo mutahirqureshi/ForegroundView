@@ -15,7 +15,7 @@
  *
  */
 
-package com.anttek.foreground.widget;
+package com.mutahirqureshi.foreground.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -24,31 +24,31 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.widget.EditText;
+import android.widget.GridView;
 
 /**
  * Created by Bao Le on 9/26/2015.
  * Add foreground to base view
  */
-public class ForegroundEditText extends EditText {
+public class ForegroundGridView extends GridView {
 
     private final ForegroundViewImpl mImpl = new ForegroundViewImpl(this);
 
-    public ForegroundEditText(Context context) {
+    public ForegroundGridView(Context context) {
         this(context, null);
     }
 
-    public ForegroundEditText(Context context, AttributeSet attrs) {
+    public ForegroundGridView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public ForegroundEditText(Context context, AttributeSet attrs, int defStyle) {
+    public ForegroundGridView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init(context, attrs, defStyle);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public ForegroundEditText(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public ForegroundGridView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(context, attrs, defStyleAttr);
     }
@@ -84,7 +84,7 @@ public class ForegroundEditText extends EditText {
     }
 
     @Override
-    protected boolean verifyDrawable(Drawable who) {
+    public boolean verifyDrawable(Drawable who) {
         return super.verifyDrawable(who) || (mImpl != null && mImpl.verifyDrawable(who));
     }
 

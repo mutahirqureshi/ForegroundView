@@ -15,7 +15,7 @@
  *
  */
 
-package com.anttek.foreground.widget;
+package com.mutahirqureshi.foreground.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -24,38 +24,41 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.widget.GridLayout;
+import android.widget.ImageView;
 
 /**
  * Created by Bao Le on 9/26/2015.
  * Add foreground to base view
  */
-public class ForegroundGridLayout extends GridLayout {
+public class ForegroundImageView extends ImageView {
 
     private final ForegroundViewImpl mImpl = new ForegroundViewImpl(this);
 
-    public ForegroundGridLayout(Context context) {
+    public ForegroundImageView(Context context) {
         this(context, null);
     }
 
-    public ForegroundGridLayout(Context context, AttributeSet attrs) {
+    public ForegroundImageView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public ForegroundGridLayout(Context context, AttributeSet attrs, int defStyle) {
+
+    public ForegroundImageView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init(context, attrs, defStyle);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public ForegroundGridLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public ForegroundImageView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(context, attrs, defStyleAttr);
     }
 
     private void init(Context context, AttributeSet attrs, int defStyle) {
         mImpl.init(context, attrs, defStyle);
+
     }
+
     /**
      * Describes how the foreground is positioned.
      *

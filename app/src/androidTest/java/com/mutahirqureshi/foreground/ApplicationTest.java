@@ -1,4 +1,4 @@
-package com.anttek.foreground;
+package com.mutahirqureshi.foreground;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
