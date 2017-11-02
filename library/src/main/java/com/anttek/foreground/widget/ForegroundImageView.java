@@ -32,7 +32,7 @@ import android.widget.ImageView;
  */
 public class ForegroundImageView extends ImageView {
 
-    private final ForegroundViewImlp mImpl = new ForegroundViewImlp(this);
+    private final ForegroundViewImpl mImpl = new ForegroundViewImpl(this);
 
     public ForegroundImageView(Context context) {
         this(context, null);

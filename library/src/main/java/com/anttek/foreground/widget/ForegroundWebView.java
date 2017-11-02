@@ -32,7 +32,7 @@ import android.webkit.WebView;
  */
 public class ForegroundWebView extends WebView {
 
-    private final ForegroundViewImlp mImpl = new ForegroundViewImlp(this);
+    private final ForegroundViewImpl mImpl = new ForegroundViewImpl(this);
 
     public ForegroundWebView(Context context) {
         this(context, null);

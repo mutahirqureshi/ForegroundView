@@ -32,7 +32,7 @@ import android.widget.ScrollView;
  */
 public class ForegroundScrollView extends ScrollView {
 
-    private final ForegroundViewImlp mImpl = new ForegroundViewImlp(this);
+    private final ForegroundViewImpl mImpl = new ForegroundViewImpl(this);
 
     public ForegroundScrollView(Context context) {
         this(context, null);

@@ -32,7 +32,7 @@ import android.widget.EditText;
  */
 public class ForegroundEditText extends EditText {
 
-    private final ForegroundViewImlp mImpl = new ForegroundViewImlp(this);
+    private final ForegroundViewImpl mImpl = new ForegroundViewImpl(this);
 
     public ForegroundEditText(Context context) {
         this(context, null);

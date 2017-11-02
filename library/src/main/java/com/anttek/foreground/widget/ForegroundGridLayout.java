@@ -32,7 +32,7 @@ import android.widget.GridLayout;
  */
 public class ForegroundGridLayout extends GridLayout {
 
-    private final ForegroundViewImlp mImpl = new ForegroundViewImlp(this);
+    private final ForegroundViewImpl mImpl = new ForegroundViewImpl(this);
 
     public ForegroundGridLayout(Context context) {
         this(context, null);

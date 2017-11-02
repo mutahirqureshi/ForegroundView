@@ -32,7 +32,7 @@ import android.widget.LinearLayout;
  */
 public class ForegroundLinearLayout extends LinearLayout {
 
-    private final ForegroundViewImlp mImpl = new ForegroundViewImlp(this);
+    private final ForegroundViewImpl mImpl = new ForegroundViewImpl(this);
 
     public ForegroundLinearLayout(Context context) {
         this(context, null);

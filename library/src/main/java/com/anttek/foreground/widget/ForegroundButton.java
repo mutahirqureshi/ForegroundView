@@ -32,7 +32,7 @@ import android.widget.Button;
  */
 public class ForegroundButton extends Button {
 
-    private final ForegroundViewImlp mImpl = new ForegroundViewImlp(this);
+    private final ForegroundViewImpl mImpl = new ForegroundViewImpl(this);
 
     public ForegroundButton(Context context) {
         this(context, null);

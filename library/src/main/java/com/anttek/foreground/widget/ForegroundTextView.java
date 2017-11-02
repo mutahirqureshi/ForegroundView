@@ -32,7 +32,7 @@ import android.widget.TextView;
  */
 public class ForegroundTextView extends TextView {
 
-    private final ForegroundViewImlp mImpl = new ForegroundViewImlp(this);
+    private final ForegroundViewImpl mImpl = new ForegroundViewImpl(this);
 
     public ForegroundTextView(Context context) {
         this(context, null);
