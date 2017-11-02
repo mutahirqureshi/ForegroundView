@@ -32,7 +32,7 @@ import android.widget.ListView;
  */
 public class ForegroundListView extends ListView {
 
-    private final ForegroundViewImlp mImpl = new ForegroundViewImlp(this);
+    private final ForegroundViewImpl mImpl = new ForegroundViewImpl(this);
 
     public ForegroundListView(Context context) {
         this(context, null);

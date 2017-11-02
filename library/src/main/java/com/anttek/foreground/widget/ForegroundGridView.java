@@ -32,7 +32,7 @@ import android.widget.GridView;
  */
 public class ForegroundGridView extends GridView {
 
-    private final ForegroundViewImlp mImpl = new ForegroundViewImlp(this);
+    private final ForegroundViewImpl mImpl = new ForegroundViewImpl(this);
 
     public ForegroundGridView(Context context) {
         this(context, null);

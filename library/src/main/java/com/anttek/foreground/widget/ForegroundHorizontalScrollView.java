@@ -32,7 +32,7 @@ import android.widget.HorizontalScrollView;
  */
 public class ForegroundHorizontalScrollView extends HorizontalScrollView {
 
-    private final ForegroundViewImlp mImpl = new ForegroundViewImlp(this);
+    private final ForegroundViewImpl mImpl = new ForegroundViewImpl(this);
 
     public ForegroundHorizontalScrollView(Context context) {
         this(context, null);

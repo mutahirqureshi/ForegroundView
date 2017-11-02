@@ -34,7 +34,7 @@ import android.view.View;
  * Created by Bao Le Duc on 9/26/2015.
  * Impl of foreground view delegation
  */
- public class ForegroundViewImlp   {
+ public class ForegroundViewImpl {
 
     private final View mTargetView;
     private Drawable mForeground;
@@ -48,7 +48,7 @@ import android.view.View;
 
     boolean mForegroundBoundsChanged = false;
 
-    public ForegroundViewImlp(View targetView) {
+    public ForegroundViewImpl(View targetView) {
         this.mTargetView = targetView;
     }
 

@@ -32,7 +32,7 @@ import android.widget.RelativeLayout;
  */
 public class ForegroundRelativeLayout extends RelativeLayout {
 
-    private final ForegroundViewImlp mImpl = new ForegroundViewImlp(this);
+    private final ForegroundViewImpl mImpl = new ForegroundViewImpl(this);
 
     public ForegroundRelativeLayout(Context context) {
         this(context, null);
